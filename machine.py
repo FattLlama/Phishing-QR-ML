@@ -27,6 +27,8 @@ qr_train, qr_val = utils.split_dataset(
     shuffle = True,
     seed = 123)
 
+print("Successfully split dataset")
+'''
 # Preview images
 plt.figure(figsize=(10, 10))
 for images, labels in qr_train.take(1):
@@ -90,7 +92,7 @@ model.compile(
   metrics=['accuracy'])
 
 model.summary()
-'''
+
 model.fit(
   qr_train,
   validation_data=qr_val,
